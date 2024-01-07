@@ -1,0 +1,120 @@
+/* Main container styling */
+.App {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the start of the flex container */
+}
+
+/* Logo styling */
+.App-logo {
+  height: 40vmin; /* Responsive height based on viewport */
+  pointer-events: none; /* Disables interaction with the logo */
+}
+
+/* Animation for the logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Infinite spinning animation */
+  }
+}
+
+/* Header section styling */
+.App-header {
+  background-color: #282c34; /* Dark background color */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin); /* Responsive font size */
+  color: white;
+  width: 33%; /* One-third of the container width */
+  padding: 20px;
+  box-sizing: border-box; /* Border and padding included in width */
+}
+
+/* Styling for visualization section */
+.visualization {
+  width: 67%; /* Two-thirds of the container width */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(50, 79, 90); /* Example background color */
+}
+
+/* Link styling */
+.App-link {
+  color: #61dafb; /* Light blue color for links */
+}
+
+/* Container for each bar in a bar chart */
+.bar-container {
+  width: 100%;
+  background-color: rgb(58, 45, 45); /* Dark background color */
+  border: 1px solid rgb(5, 4, 4); /* Subtle border */
+  height: 20px;
+  margin-bottom: 50px; /* Space below each bar */
+  position: relative;
+}
+
+/* Individual bar styling */
+.bar {
+  height: 100%;
+  background-color: rgb(23, 106, 230); /* Blue color for the bar */
+  transition: width 0.3s ease-in-out; /* Smooth transition for width changes */
+}
+
+/* Styling for text showing percentage */
+.percentage-text {
+  z-index: 1; /* Ensures the text is above other elements */
+}
+
+/* Container for the bar chart */
+.bar-chart {
+  display: flex;
+  justify-content: space-between;
+  height: 200px; /* Adjustable based on need */
+  margin: 20px;
+  border-bottom: 2px solid black; /* Bottom border for the chart */
+}
+
+/* Container for each bar in the chart */
+.bar-in-chart-container {
+  width: 2%; /* Width should be adjusted based on the number of bars */
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centers the bars within the container */
+}
+
+/* Styling for each bar within the chart */
+.bar-in-chart {
+  width: 100%;
+  background-color: rgb(247, 131, 36); /* Orange color for the bar */
+  transition: height 0.3s ease-in-out; /* Smooth transition for height changes */
+  align-self: flex-end; /* Aligns the bar to the bottom */
+  position: relative; /* Needed for positioning the label */
+}
+
+/* Styling for bars above a certain threshold */
+.bar-above-threshold {
+  background-color: rgb(160, 23, 23); /* Red color for high-value bars */
+}
+
+/* Label styling for the bars */
+.bar-label {
+  position: absolute;
+  bottom: -10px; /* Position below the bar */
+  width: 100%;
+  text-align: center; /* Center the label text */
+  color: white; /* White color for readability */
+  font-size: 12px; /* Size of the text */
+}
+
+/* Keyframes for logo spinning animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
